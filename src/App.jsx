@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { Routes, Route } from 'react-router-dom';
 import "./App.css";
 import AppMovies from "./components/AppMovies";
-import SingleSerie from "./components/SingleSerie";
+import MovieDetails from './components/MovieDetials';
 
 
 function App() {
   return (
     <>
 <div className="">
-<AppMovies></AppMovies>
+{/* <AppMovies></AppMovies> */}
+<Routes>
+        <Route path="/movies" element={<AppMovies />} />
+        <Route path="/details" element={<MovieDetails />} />
+      </Routes>
 
 </div>
     </>
