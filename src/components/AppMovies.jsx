@@ -23,6 +23,7 @@ function AppMovies() {
       })
       .then(data => {
         setMovies(data.results);
+        console.log(data.results)
       })
       .catch(err => {
         setError(err.message);
@@ -31,6 +32,7 @@ function AppMovies() {
 
   return (
     <div>
+        <h5 className="text-3xl pb-4 text-red-700 font-bold">Movies List:</h5>
       <div className="flex flex-wrap justify-center">
           {movies.map(movie => (
             <SingleMovie key={movie.id} movie={movie} />

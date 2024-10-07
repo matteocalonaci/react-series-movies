@@ -40,9 +40,9 @@ const SingleMovie = ({ movie }) => {
               >
                 {movie.overview}
               </div>
-              {/* <Link to={`/movies/${movie.id}`}>
+              <Link to={`/movies/${movie.id}`}>
                 <button>Read More</button>
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>
