@@ -9,7 +9,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: plum;
+  background-color: rgb(0, 0, 0);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -44,5 +44,36 @@
 }
 
 .movie-container:hover .movie-image {
+  opacity: 0.5;
+}
+
+
+.serie-container {
+  position: relative;
+}
+
+.serie-image {
+  transition: opacity 0.5s;
+}
+
+.serie-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 0, 0, 0.762);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.5s;
+  display: none;
+}
+
+.serie-container:hover .serie-info {
+  display: block;
+  opacity: 1;
+}
+
+.serie-container:hover .serie-image {
   opacity: 0.5;
 }

@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 5rem;
+  background-color: rgba(255, 0, 4, 0.385);
+  position: sticky;
+  top: 2rem;
+  z-index: 999;
+  margin-bottom: 5rem;
+}
+
+.violet-bg{
+  background-color: rgba(255, 0, 4, 0.385);
+
+}
