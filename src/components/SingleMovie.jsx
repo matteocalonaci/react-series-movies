@@ -15,7 +15,7 @@ const SingleMovie = ({ movie }) => {
   };
 
   return (
-    <div className="w-1/5 border border-black m-2">
+    <div className="movie-card w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/5 p-2 m-2 border border-black hover:bg-gray-100 hover:shadow-md">
       <div className="movie-container">
         <img
           className="w-full movie-image"
@@ -27,7 +27,6 @@ const SingleMovie = ({ movie }) => {
             <h2 className="text-m p-3 bg-transparent">
               <b>{movie.title}</b>
             </h2>
-            <p className="pb-2">Release Date: {movie.release_date}</p>
             <div>
               <div
                 className="description"
@@ -41,7 +40,9 @@ const SingleMovie = ({ movie }) => {
                 {movie.overview}
               </div>
               <Link to={`/movies/${movie.id}`}>
-                <button>Read More</button>
+                <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                  Read More
+                </button>
               </Link>
             </div>
           </div>

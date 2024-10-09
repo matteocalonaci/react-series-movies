@@ -36,22 +36,21 @@ function MovieDetails() {
   }
 
   return (
-    <div className='flex p-2 rounded-2xl violet-bg'>
-         <img
-          className="w-1/3 movie-image"
-          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-          alt={movie.title}
-        />
-        <div className="px-5">
-      <h1 className='text-3xl font-bold pb-10'>{movie.title}</h1>
-      <p className='text-start pb-2'><b>Description:</b> {movie.overview}</p>
-      <p className='text-start pb-2'><b>Original language:</b> {movie.original_language}</p>
-      <p className='text-start pb-2'><b>Release date:</b> {movie.release_date}</p>
-      <p className='text-start pb-2'><b>Vote:</b> {movie.vote_average}</p>
+    <div className="flex flex-wrap md:flex-nowrap lg:flex-nowrap xl:flex-nowrap p-2 rounded-2xl violet-bg">
+      <img
+        className="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 movie-image"
+        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        alt={movie.title}
+      />
+      <div className="px-5 md:px-10 lg:px-10 xl:px-10">
+        <h1 className="text-3xl font-bold pb-10">{movie.title}</h1>
+        <p className="text-start pb-2"><b>Description:</b> {movie.overview}</p>
+        <p className="text-start pb-2"><b>Original language:</b> {movie.original_language}</p>
+        <p className="text-start pb-2"><b>Release date:</b> {movie.release_date}</p>
+        <p className="text-start pb-2"><b>Vote:</b> {movie.vote_average}</p>
       </div>
-      </div>
-
-  )
+    </div>
+  );
 }
 
 export default MovieDetails;

@@ -15,7 +15,7 @@ const SingleSerie = ({ serie }) => {
   };
 
   return (
-    <div className="w-1/5 border border-black m-2">
+    <div className="serie-card w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/5 p-2 m-2 border border-black hover:bg-gray-100 hover:shadow-md">
       <div className="serie-container">
         <img
           className="w-full serie-image"
@@ -40,7 +40,9 @@ const SingleSerie = ({ serie }) => {
                 {serie.overview}
               </div>
               <Link to={`/series/${serie.id}`}>
-                <button>Read More</button>
+                <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                  Read More
+                </button>
               </Link>
             </div>
           </div>
