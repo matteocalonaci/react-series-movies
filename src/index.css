@@ -158,6 +158,14 @@ nav{
     flex-direction: row;
     justify-content: space-evenly;
   }
+  .movie-card {
+    width: 44%; /* Set width to 50% on mobile devices */
+  }
+
+  .serie-card {
+    width: 44%; /* Set width to 50% on mobile devices */
+  }
+  
 }
 
 

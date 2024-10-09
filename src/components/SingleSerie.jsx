@@ -22,16 +22,16 @@ const SingleSerie = ({ serie }) => {
           src={`https://image.tmdb.org/t/p/w500${serie.poster_path}`}
           alt={serie.name}
         />
-        <div className="serie-info hidden">
-          <div className="info p-2 bg-neutral-900 bg-transparent">
-            <h2 className="text-m p-3 bg-transparent">
+        <div className="serie-info hidden sm:p-2 sm:w-full">
+          <div className="info sm:p-1 sm:bg-transparent">
+            <h2 className="text-m sm:text-sm p-1 sm:p-0">
               <b>{serie.name}</b>
             </h2>
-            <div>
+            <div className="sm:flex sm:flex-col">
               <div
-                className="description"
+                className="description sm:text-xs sm:w-full"
                 style={{
-                  maxHeight: "100px",
+                  maxHeight: "50px",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
                   whiteSpace: "nowrap",
@@ -40,7 +40,7 @@ const SingleSerie = ({ serie }) => {
                 {serie.overview}
               </div>
               <Link to={`/series/${serie.id}`}>
-                <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-2 rounded sm:text-xs sm:mt-2">
                   Read More
                 </button>
               </Link>
